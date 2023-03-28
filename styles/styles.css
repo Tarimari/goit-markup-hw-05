@@ -48,7 +48,7 @@ img {
     padding: 0 15px;
     margin: auto;
 
-    outline: 1px solid orange;
+    /* outline: 1px solid orange; */
 }
 
 .visually_hidden {
@@ -124,6 +124,7 @@ img {
     letter-spacing: 0.02em;
     color: var(--dark);
 
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-item:is(:hover, :focus) {
@@ -146,6 +147,8 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--text);
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-contacts:is(:hover, :focus) {
@@ -208,6 +211,8 @@ img {
     height: 40px;
     border-radius: 50%;
     background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon-link:is(:hover, :focus) {
@@ -274,6 +279,8 @@ img {
     padding-right: 32px;
     border-radius: 4px;
     border: none;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .face-btn:is(:hover, :focus) {
@@ -432,6 +439,8 @@ img {
     height: 40px;
     border-radius: 50%;
     background-color: var(--primary_brand);
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-icon-link:is(:hover, :focus) {
@@ -481,12 +490,16 @@ img {
 
     border: 1px solid var(--subtle_text);
     border-radius: 4px;
+
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-icon {
     width: 104px;
     height: 56px;
     fill: var(--subtle_text);
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-link:is(:hover, :focus) {
@@ -527,6 +540,10 @@ img {
     padding-right: 24px;
     border: 1px solid var(--accent);
     border-radius: 4px;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filters-btn:is(:hover, :focus) {
@@ -552,6 +569,41 @@ img {
 .exempl-link {
     display: block;
     background-color: var(--white_background);
+
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.exempl-picture {
+    position: relative;
+    overflow: hidden;
+}
+
+.exempl-picture-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--light);
+    padding-top: 40px;
+    padding-left: 32px;
+    padding-right: 32px;
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    background-color: var(--primary_brand);
+
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+
+}
+
+.exempl-link:is(:hover, :focus) .exempl-picture-text {
+    transform: translateY(0);
 }
 
 .exempl-link:is(:hover, :focus) {
@@ -573,7 +625,6 @@ img {
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: var(--dark);
-
 
     margin-bottom: 8px;
 }
