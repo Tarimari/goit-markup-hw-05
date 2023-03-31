@@ -99,18 +99,39 @@ img {
     position: absolute;
     top: 24px;
     right: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 24px;
     height: 24px;
-
-    background-image: url(../images/x.svg), url(../images/o.svg);
-    background-repeat: no-repeat, no-repeat;
-    background-position: 50% 50%, 50% 50%;
-    background-size: auto, auto;
-    border: none;
+    border: 1px solid var(--dark);
+    border-radius: 50%;
     background-color: var(--white_background);
+    
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
 
 }
+
+.close-btn{
+
+    width: 8px;
+    height: 8px;
+    fill: var(--dark);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop-close-btn:is(:hover, :focus) {
+    border: 1px solid var(--pressed_state);
+    background-color: var(--pressed_state);
+}
+
+.backdrop-close-btn:is(:hover, :focus) .close-btn{
+    fill: var(--white_background);
+    transform: rotate(180deg);
+}
+
 
 
 
